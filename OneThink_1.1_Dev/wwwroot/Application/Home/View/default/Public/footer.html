@@ -1,0 +1,43 @@
+
+    <!-- 底部
+    ================================================== -->
+    <link rel="alternate icon" type="__PUBLIC__/Home/images/hengwangkeji/hengwang-1.png" href="__PUBLIC__/Home/images/hengwangkeji/hengwang-1.png">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/amazeui.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/style.css"/>
+    <footer class="footer">
+        <ul>
+            <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
+                <div class="part-5-title">联系我们</div>
+                <div class="part-5-words2">
+                    <span>地址:武汉市洪山区街道口鹏程国际B座2511</span>
+                    <span>电话:18238765101</span>
+                    <span>传真:(123) 456-7890</span>
+                    <span>邮箱:support@vectorlab.com</span>
+                    <span><i class="am-icon-phone"></i><em >027-82671661</em></span>
+                </div>
+            </li>
+            <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
+                <div class="part-5-title">相关链接</div>
+                <div class="part-5-words2">
+                    <ul class="part-5-words2-ul">
+                        <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{:U('Index/solutions')}">解决方案</a></li>
+                        <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{:U('Index/showProduct')}">产品展示</a></li>
+                        <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{:U('Index/useCase')}">客户案例</a></li>
+                        <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{:U('Index/service')}">服务中心</a></li>
+                        <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{:U('Index/aboutUs')}">关于我们</a></li>
+                        <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{:U('Index/recruit')}">招贤纳士</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </footer>
+
+<include file="Public/var"/>
+<block name="script"></block> <!-- 用于加载js代码 -->
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+	<block name="hidden"></block>
+</div>

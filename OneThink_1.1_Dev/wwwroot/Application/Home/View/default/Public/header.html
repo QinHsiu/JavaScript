@@ -1,0 +1,94 @@
+<!-- 导航条
+================================================== -->
+<!--div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="{:U('index/index')}">恒望科技</a>
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <think:nav name="nav">
+                    	<eq name="nav.pid" value="0">
+                        <li>
+                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                        </li>
+                        </eq>
+                    </think:nav>
+                </ul>
+            </div>
+            <div class="nav-collapse collapse pull-right">
+                <if condition="is_login()">
+                    <ul class="nav" style="margin-right:0">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left:0;padding-right:0">{:get_username()} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{:U('User/profile')}">修改密码</a></li>
+                                <li><a href="{:U('User/logout')}">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                <else/>
+                    <ul class="nav" style="margin-right:0">
+                        <li>
+                            <a href="{:U('User/login')}">登录</a>
+                        </li>
+                        <li>
+                            <a href="{:U('User/register')}" style="padding-left:0;padding-right:0">注册</a>
+                        </li>
+                    </ul>
+                </if>
+            </div>
+        </div>
+    </div>
+</div-->
+<link rel="alternate icon" type="__PUBLIC__/Home/images/hengwangkeji/hengwang-1.png" href="__PUBLIC__/Home/images/hengwangkeji/hengwang-1.png">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/amazeui.css"/>
+<link rel="stylesheet" href="__PUBLIC__/Home/css/style.css"/>
+<header class="am-topbar header">
+    <div class="am-container-1">
+        <div class="left hw-logo">
+            <img class="logo" src="__PUBLIC__/Home/images/hengwangkeji/HENGWANG.png"></img>
+            <img class="word" src="__PUBLIC__/Home/images/hengwangkeji/hw-word.png"></img>
+        </div>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+                data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+                class="am-icon-bars"></span></button>
+        <div class="am-collapse am-topbar-collapse right" id="doc-topbar-collapse">
+            <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
+                <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
+                    <li class="hw-menu-active"><a href="{:U('Index/index')}">首页</a></li>
+                    <li><a href="{:U('Index/solutions')}">解决方案</a></li>
+                    <li><a href="{:U('Index/showProducts')}">产品展示 </a></li>
+                    <li><a href="{:U('Index/useCase')}">客户案例</a></li>
+                    <li><a href="{:U('Index/service')}">服务中心 </a></li>
+                    <li><a href="{:U('Index/news')}">新闻动态 </a></li>
+                    <li><a href="{:U('Index/aboutUs')}">关于我们</a></li>
+                    <li><a href="{:U('Index/recruit')}">招贤纳士 </a></li>
+                        <if condition="is_login()">
+                            <div class="am-topbar-left am-form-inline am-topbar-right am-dropdow" data-am-dropdown>
+                                <li><button class="am-btn am-btn-success am-dropdown-toggle" data-am-dropdown-toggle>欢迎您：{:get_username()}<span class="am-icn-caret-down"></span></button></li>
+                                <ul class="am-dropdown-content">
+                                    <li><a href="{:U('User/profile')}">修改密码</a></li>
+                                    <li><a href="{:U('User/logout')}">退出</a></li>
+                                </ul>
+                            </div>
+                            <else/>
+                            <!--ul class="am-dropdown-content"-->
+                            <li>
+                                <a href="{:U('User/login')}">登录</a>
+                            </li>
+                            <li>
+                                <a href="{:U('User/register')}">注册</a>
+                            </li>
+                        </if>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
